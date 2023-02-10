@@ -8,6 +8,8 @@ See: https://www.powershellgallery.com/packages/PSWindowsUpdate for details on
 how to customize and use the module for your needs.
 #>
 
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 # Ensure PSWindowsUpdate is installed on the system.
 if(!(Get-installedmodule PSWindowsUpdate)){
 
